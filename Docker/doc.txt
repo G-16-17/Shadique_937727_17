@@ -1,0 +1,40 @@
+C:\Users\Sahdi>docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+debian              latest              82bd5ee7b1c5        10 days ago         124MB
+nginx               1.17.5              540a289bab6c        23 months ago       126MB
+
+C:\Users\Sahdi>docker image ls -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+debian              latest              82bd5ee7b1c5        10 days ago         124MB
+nginx               1.17.5              540a289bab6c        23 months ago       126MB
+
+C:\Users\Sahdi>docker run it debain
+Unable to find image 'it:latest' locally
+docker: Error response from daemon: pull access denied for it, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+
+C:\Users\Sahdi>docker run -it debain
+Unable to find image 'debain:latest' locally
+docker: Error response from daemon: pull access denied for debain, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+
+C:\Users\Sahdi>docker run -it debian
+root@0df315854219:/# pwd
+/
+root@0df315854219:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@0df315854219:/# uname -a
+Linux 0df315854219 4.19.130-boot2docker #1 SMP Mon Jun 29 23:52:55 UTC 2020 x86_64 GNU/Linux
+root@0df315854219:/# exit
+exit
+
+C:\Users\Sahdi>docker pull nginx:1.17.5
+1.17.5: Pulling from library/nginx
+Digest: sha256:922c815aa4df050d4df476e92daed4231f466acc8ee90e0e774951b0fd7195a4
+Status: Image is up to date for nginx:1.17.5
+docker.io/library/nginx:1.17.5
+
+C:\Users\Sahdi>docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+debian              latest              82bd5ee7b1c5        10 days ago         124MB
+nginx               1.17.5              540a289bab6c        23 months ago       126MB
