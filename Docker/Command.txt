@@ -1,0 +1,26 @@
+C:\Users\Sahdi>docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+nginx        latest    ad4c705f24d3   3 days ago      133MB
+debian       latest    82bd5ee7b1c5   10 days ago     124MB
+nginx        1.17.5    540a289bab6c   23 months ago   126MB
+
+C:\Users\Sahdi>docker container ls -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                      PORTS     NAMES
+58c496cd853f   debian    "bash"    21 minutes ago   Exited (0) 20 minutes ago             unruffled_mcclintock
+0df315854219   debian    "bash"    2 hours ago      Exited (0) 2 hours ago                optimistic_cerf
+2c2410ca68d3   debian    "bash"    3 hours ago      Exited (0) 3 hours ago                vigilant_villani
+
+C:\Users\Sahdi>docker run -it debain
+Unable to find image 'debain:latest' locally
+docker: Error response from daemon: pull access denied for debain, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+
+C:\Users\Sahdi>docker run -it debian
+root@ac78fbd68126:/# pwd
+/
+root@ac78fbd68126:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@ac78fbd68126:/# uname -a
+Linux ac78fbd68126 4.19.130-boot2docker #1 SMP Mon Jun 29 23:52:55 UTC 2020 x86_64 GNU/Linux
+root@ac78fbd68126:/# exit
+exit
